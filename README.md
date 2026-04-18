@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="hero.png" width="160" alt="Byte Design Studio" />
+<img src="app-icon.png" width="160" alt="Byte Design Studio" />
 
 # Byte Design Studio
 
