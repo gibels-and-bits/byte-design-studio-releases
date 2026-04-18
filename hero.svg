@@ -1,60 +1,132 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="1200" height="360" role="img" aria-label="Byte Design Studio">
   <defs>
-    <linearGradient id="titleGrad" x1="0" y1="0" x2="1" y2="0">
+    <linearGradient id="brand" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0%" stop-color="#2dd4bf"/>
       <stop offset="50%" stop-color="#6366f1"/>
       <stop offset="100%" stop-color="#a855f7"/>
     </linearGradient>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#0a0612"/>
-      <stop offset="100%" stop-color="#1e1240"/>
+      <stop offset="0%" stop-color="#06040f"/>
+      <stop offset="100%" stop-color="#120a2a"/>
     </linearGradient>
-    <radialGradient id="glowPurple" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#a855f7" stop-opacity="0.45"/>
-      <stop offset="100%" stop-color="#a855f7" stop-opacity="0"/>
-    </radialGradient>
+    <pattern id="gridFine" x="0" y="0" width="10" height="10" patternUnits="userSpaceOnUse">
+      <path d="M 10 0 L 0 0 L 0 10" stroke="#2dd4bf" stroke-opacity="0.025" stroke-width="0.5" fill="none"/>
+    </pattern>
+    <pattern id="gridMajor" x="0" y="0" width="50" height="50" patternUnits="userSpaceOnUse">
+      <path d="M 50 0 L 0 0 L 0 50" stroke="#2dd4bf" stroke-opacity="0.07" stroke-width="1" fill="none"/>
+    </pattern>
     <radialGradient id="glowTeal" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#2dd4bf" stop-opacity="0.30"/>
+      <stop offset="0%" stop-color="#2dd4bf" stop-opacity="0.28"/>
       <stop offset="100%" stop-color="#2dd4bf" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowPurple" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#a855f7" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#a855f7" stop-opacity="0"/>
     </radialGradient>
   </defs>
 
+  <!-- Background -->
   <rect width="1200" height="360" fill="url(#bg)"/>
+  <rect width="1200" height="360" fill="url(#gridFine)"/>
+  <rect width="1200" height="360" fill="url(#gridMajor)"/>
 
-  <circle cx="1050" cy="80" r="260" fill="url(#glowPurple)"/>
-  <circle cx="120" cy="310" r="240" fill="url(#glowTeal)"/>
+  <!-- Atmospheric glows -->
+  <circle cx="180" cy="180" r="240" fill="url(#glowTeal)"/>
+  <circle cx="1020" cy="180" r="240" fill="url(#glowPurple)"/>
 
-  <g stroke="#ffffff" stroke-opacity="0.04" stroke-width="1">
-    <line x1="0" y1="90" x2="1200" y2="90"/>
-    <line x1="0" y1="180" x2="1200" y2="180"/>
-    <line x1="0" y1="270" x2="1200" y2="270"/>
+  <!-- Corner registration (crop) marks -->
+  <g stroke="#2dd4bf" stroke-width="1.25" fill="none" opacity="0.55">
+    <path d="M 22 50 L 22 22 L 50 22"/>
+    <path d="M 1178 50 L 1178 22 L 1150 22"/>
+    <path d="M 22 310 L 22 338 L 50 338"/>
+    <path d="M 1178 310 L 1178 338 L 1150 338"/>
   </g>
 
-  <text x="600" y="180" text-anchor="middle"
-        font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif"
-        font-size="96" font-weight="800"
-        fill="url(#titleGrad)">Byte Design Studio</text>
-
-  <text x="600" y="240" text-anchor="middle"
-        font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif"
-        font-size="26" font-weight="500"
-        fill="#c4b5fd" fill-opacity="0.9">Describe it &#8226; See it &#8226; Ship it</text>
-
-  <g stroke="#2dd4bf" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.8">
-    <path d="M 80 155 L 50 155 L 50 225 L 80 225"/>
+  <!-- Top dimension line -->
+  <g stroke="#c4b5fd" stroke-width="0.75" fill="none" opacity="0.32">
+    <line x1="60" y1="32" x2="560" y2="32"/>
+    <line x1="640" y1="32" x2="1140" y2="32"/>
+    <line x1="60" y1="27" x2="60" y2="37"/>
+    <line x1="1140" y1="27" x2="1140" y2="37"/>
   </g>
-  <g stroke="#a855f7" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.8">
-    <path d="M 1120 155 L 1150 155 L 1150 225 L 1120 225"/>
+  <text x="600" y="35" text-anchor="middle" font-family="'SF Mono', Menlo, Consolas, monospace" font-size="11" fill="#c4b5fd" fill-opacity="0.55" letter-spacing="2">1200 × 360</text>
+
+  <!-- Left dimension line -->
+  <g stroke="#c4b5fd" stroke-width="0.75" fill="none" opacity="0.28">
+    <line x1="32" y1="60" x2="32" y2="160"/>
+    <line x1="32" y1="200" x2="32" y2="300"/>
+    <line x1="27" y1="60" x2="37" y2="60"/>
+    <line x1="27" y1="300" x2="37" y2="300"/>
   </g>
 
-  <g fill="#2dd4bf" opacity="0.45">
-    <circle cx="960" cy="70" r="3"/>
-    <circle cx="990" cy="90" r="2"/>
-    <circle cx="1010" cy="55" r="2.5"/>
+  <!-- The stylized B mark -->
+  <g transform="translate(90, 80)">
+    <!-- Construction guide rectangle (very faint) -->
+    <rect x="-8" y="-8" width="216" height="216" stroke="#2dd4bf" stroke-opacity="0.18" stroke-width="0.75" fill="none" stroke-dasharray="3 4"/>
+    <!-- Big B in brand gradient -->
+    <text x="0" y="180" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif"
+          font-size="260" font-weight="900" fill="url(#brand)" letter-spacing="-10">B</text>
+    <!-- Angular notch cut on the left side (matches the app icon) -->
+    <polygon points="18,85 48,110 18,135" fill="#06040f"/>
+    <!-- Sparkle/dot accents (like the icon's floating pieces) -->
+    <g fill="#2dd4bf" opacity="0.7">
+      <rect x="175" y="15" width="6" height="6" transform="rotate(45 178 18)"/>
+      <circle cx="195" cy="40" r="2.5"/>
+      <circle cx="170" cy="55" r="1.5"/>
+    </g>
+    <g fill="#a855f7" opacity="0.7">
+      <rect x="180" y="170" width="5" height="5" transform="rotate(45 182 172)"/>
+      <circle cx="160" cy="190" r="2"/>
+      <circle cx="190" cy="200" r="1.5"/>
+    </g>
   </g>
-  <g fill="#a855f7" opacity="0.45">
-    <circle cx="200" cy="295" r="3"/>
-    <circle cx="240" cy="275" r="2"/>
-    <circle cx="170" cy="320" r="2.5"/>
+
+  <!-- Vertical separator between B and wordmark -->
+  <line x1="340" y1="100" x2="340" y2="260" stroke="#2dd4bf" stroke-opacity="0.25" stroke-width="0.75" stroke-dasharray="2 5"/>
+
+  <!-- Wordmark -->
+  <text x="380" y="178" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif"
+        font-size="68" font-weight="800" fill="url(#brand)" letter-spacing="-1">Byte Design Studio</text>
+
+  <!-- Subtitle with ruler-like ticks -->
+  <g transform="translate(380, 220)">
+    <text font-family="'SF Mono', Menlo, Consolas, monospace" font-size="13" font-weight="500" fill="#c4b5fd" fill-opacity="0.85" letter-spacing="4">DESCRIBE &#8226; SEE &#8226; SHIP</text>
+  </g>
+
+  <!-- Small label under subtitle -->
+  <text x="380" y="256" font-family="'SF Mono', Menlo, Consolas, monospace" font-size="11" fill="#8b7fb3" fill-opacity="0.75" letter-spacing="1.5">AI-assisted design &#8212; native macOS</text>
+
+  <!-- Bottom-left ruler tick marks -->
+  <g stroke="#2dd4bf" stroke-width="0.75" opacity="0.35">
+    <line x1="60" y1="316" x2="60" y2="324"/>
+    <line x1="110" y1="318" x2="110" y2="324"/>
+    <line x1="160" y1="318" x2="160" y2="324"/>
+    <line x1="210" y1="316" x2="210" y2="324"/>
+    <line x1="260" y1="318" x2="260" y2="324"/>
+    <line x1="310" y1="318" x2="310" y2="324"/>
+    <line x1="360" y1="316" x2="360" y2="324"/>
+    <line x1="60" y1="322" x2="360" y2="322"/>
+  </g>
+
+  <!-- Drafting title block (bottom-right) -->
+  <g transform="translate(1000, 298)">
+    <rect width="160" height="40" fill="none" stroke="#2dd4bf" stroke-width="0.75" opacity="0.4"/>
+    <line x1="0" y1="20" x2="160" y2="20" stroke="#2dd4bf" stroke-width="0.5" opacity="0.3"/>
+    <line x1="80" y1="0" x2="80" y2="40" stroke="#2dd4bf" stroke-width="0.5" opacity="0.3"/>
+    <text x="8" y="14" font-family="'SF Mono', Menlo, Consolas, monospace" font-size="8" fill="#c4b5fd" fill-opacity="0.7" letter-spacing="1">SHEET</text>
+    <text x="72" y="14" text-anchor="end" font-family="'SF Mono', Menlo, Consolas, monospace" font-size="8" fill="#c4b5fd" fill-opacity="0.7" letter-spacing="1">01 / 01</text>
+    <text x="88" y="14" font-family="'SF Mono', Menlo, Consolas, monospace" font-size="8" fill="#c4b5fd" fill-opacity="0.7" letter-spacing="1">REV</text>
+    <text x="152" y="14" text-anchor="end" font-family="'SF Mono', Menlo, Consolas, monospace" font-size="8" fill="#c4b5fd" fill-opacity="0.7" letter-spacing="1">A</text>
+    <text x="8" y="34" font-family="'SF Mono', Menlo, Consolas, monospace" font-size="8" fill="#c4b5fd" fill-opacity="0.7" letter-spacing="1">BYTE DS</text>
+    <text x="72" y="34" text-anchor="end" font-family="'SF Mono', Menlo, Consolas, monospace" font-size="8" fill="#c4b5fd" fill-opacity="0.7" letter-spacing="1">1:1</text>
+    <text x="88" y="34" font-family="'SF Mono', Menlo, Consolas, monospace" font-size="8" fill="#c4b5fd" fill-opacity="0.7" letter-spacing="1">SIZE</text>
+    <text x="152" y="34" text-anchor="end" font-family="'SF Mono', Menlo, Consolas, monospace" font-size="8" fill="#c4b5fd" fill-opacity="0.7" letter-spacing="1">A4</text>
+  </g>
+
+  <!-- Crosshair at top-right wordmark corner (drafting reference point) -->
+  <g stroke="#2dd4bf" stroke-width="0.75" opacity="0.35">
+    <line x1="1100" y1="130" x2="1120" y2="130"/>
+    <line x1="1110" y1="120" x2="1110" y2="140"/>
+    <circle cx="1110" cy="130" r="3" fill="none"/>
   </g>
 </svg>
