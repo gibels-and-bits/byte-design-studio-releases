@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="hero.svg" alt="Byte Design Studio" width="100%" />
+<img src="hero.jpg" alt="Byte Design Studio" width="100%" />
 
 <br/>
 
